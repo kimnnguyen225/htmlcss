@@ -2,10 +2,11 @@
 <html lang='en'>
 <head><title>Personal Information</title>
 <style>
-table, th, td {
-    border: 0px solid black;
+table {
+    /*border: 1px solid black;*/
     border-collapse: collapse;
-    font-size: 16pt;
+    /*font-size: 16pt;*/
+
 }
 th, td {
     padding: 5px;
@@ -14,61 +15,71 @@ table.center {
     margin-left:auto;
     margin-right:auto;
 }
+form {
+  font-size: 16pt;
+}
 </style>
 </head>
 <body>
+<fieldset>
+  <legend style='font-size:16pt'>
+      Contact Information
+  </legend>
   <table>
+  <form method='get' action='perinform.html'>
     <tr>
-      <td>Name:</td>
+      <td>Full Name:</td>
       <td>
-          <form method='get' action='perinform.html'>
-          <input id='first' name='first' type='text' placeholder='First name'></input>
-          <input id='last' name='last' type='text' placeholder='Last name'></input>
+          <input size='43' id='first' name='fullname' type='text' placeholder='Full name'></input>
       </td>
     </tr>
     <tr>
       <td>Address:</td>
       <td>
-          <form method='get' action='perinform.html'>
-          <input id='address' name='address' type='text' placeholder='Address'></input>
+          <input size='43' id='address' name='address' type='text' placeholder='Address'></input>
       </td>
     </tr>
     <tr>
       <td>City:</td>
       <td>
-          <form method='get' action='perinform.html'>
           <input id='city' name='city' type='text' placeholder='City'></input>
+          <select name='state'>
+              <option value='OH'>Ohio</option>
+              <option selected='True' value='KY'>Kentucky</option>
+              <option value='IN'>Indiana</option>
+          </select>
+          <input size='5' id='zip' name='zip' type='text' placeholder='Zipcode'></input>
       </td>
     </tr>
-    <tr>
+    <!-- <tr>
       <td>State:</td>
       <td>
           <form method='get' action='perinform.html'>
           <input id='state' name='state' type='text' placeholder='State'></input>
       </td>
-    </tr>
-    <tr>
-      <td>Zipcode:</td>
+    </tr> -->
+    <!-- <tr>
+      <td><label>Zipcode:</label></td>
       <td>
           <form method='get' action='perinform.html'>
           <input id='zip' name='zip' type='text' placeholder='Zipcode'></input>
       </td>
-    </tr>
+    </tr> -->
     <tr>
       <td>E-mail:</td>
       <td>
-          <form method='get' action='perinform.html'>
-          <input id='email' name='email' type='text' placeholder='E-mail'></input>
+          <input size='43' id='email' name='email' type='text' placeholder='E-mail'></input>
       </td>
     </tr>
     <tr>
       <td>Phone:</td>
       <td>
-          <form method='get' action='perinform.html'>
-          <input id='phone' name='phone' type='text' placeholder='Phone'></input>
+          <input size='43' id='phone' name='phone' type='text' placeholder='Phone'></input>
       </td>
     </tr>
   </table>
-  <button type='submit'>Submit</button>
+  <br />
+  <button type='submit';>Submit</button>
+</fieldset>
 </body>
 </html>
